@@ -13,8 +13,8 @@
 		847DCA931EBC296300DAE2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847DCA911EBC296300DAE2DD /* Main.storyboard */; };
 		847DCA951EBC296400DAE2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847DCA941EBC296400DAE2DD /* Assets.xcassets */; };
 		847DCA981EBC296400DAE2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847DCA961EBC296400DAE2DD /* LaunchScreen.storyboard */; };
-		847DCAA11EBC2CE100DAE2DD /* XTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCAA01EBC2CE100DAE2DD /* XTAudioPlayer.m */; };
 		847DCAA31EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */; };
+		847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		847DCA941EBC296400DAE2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847DCA971EBC296400DAE2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847DCA991EBC296400DAE2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		847DCA9F1EBC2CE100DAE2DD /* XTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTAudioPlayer.h; sourceTree = "<group>"; };
-		847DCAA01EBC2CE100DAE2DD /* XTAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTAudioPlayer.m; sourceTree = "<group>"; };
 		847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "薛之谦-我害怕.mp3"; sourceTree = "<group>"; };
+		847DCAA51EBC6BFE00DAE2DD /* XTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTAudioPlayer.h; sourceTree = "<group>"; };
+		847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,7 @@
 		847DCA7C1EBC296000DAE2DD = {
 			isa = PBXGroup;
 			children = (
+				847DCAA41EBC6BFE00DAE2DD /* XTPlayerRecoder */,
 				847DCA871EBC296100DAE2DD /* AudioPlayer */,
 				847DCA861EBC296100DAE2DD /* Products */,
 			);
@@ -67,8 +68,6 @@
 				847DCA8C1EBC296200DAE2DD /* AppDelegate.m */,
 				847DCA8E1EBC296200DAE2DD /* ViewController.h */,
 				847DCA8F1EBC296200DAE2DD /* ViewController.m */,
-				847DCA9F1EBC2CE100DAE2DD /* XTAudioPlayer.h */,
-				847DCAA01EBC2CE100DAE2DD /* XTAudioPlayer.m */,
 				847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */,
 				847DCA911EBC296300DAE2DD /* Main.storyboard */,
 				847DCA941EBC296400DAE2DD /* Assets.xcassets */,
@@ -85,6 +84,15 @@
 				847DCA891EBC296100DAE2DD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		847DCAA41EBC6BFE00DAE2DD /* XTPlayerRecoder */ = {
+			isa = PBXGroup;
+			children = (
+				847DCAA51EBC6BFE00DAE2DD /* XTAudioPlayer.h */,
+				847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */,
+			);
+			path = XTPlayerRecoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847DCA901EBC296200DAE2DD /* ViewController.m in Sources */,
-				847DCAA11EBC2CE100DAE2DD /* XTAudioPlayer.m in Sources */,
+				847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */,
 				847DCA8D1EBC296200DAE2DD /* AppDelegate.m in Sources */,
 				847DCA8A1EBC296100DAE2DD /* main.m in Sources */,
 			);
