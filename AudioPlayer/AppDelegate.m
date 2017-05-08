@@ -16,16 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    self.window.backgroundColor = [UIColor redColor];
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *error;
-    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+    if (![session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error]) {
         NSLog(@"Category Error: %@", [error localizedDescription]); }
     if (![session setActive:YES error:&error]) {
         NSLog(@"Activation Error: %@", [error localizedDescription]);
     }
     
-    
+    // 设置网络缓存 － 4M 的内存缓存 20M 的磁盘缓存，使用默认的缓存路径 Caches/bundleId
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    // 设置全局缓存
+    [NSURLCache setSharedURLCache:cache];
     return YES;
 }
 

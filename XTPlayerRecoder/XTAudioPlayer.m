@@ -9,8 +9,6 @@
 #import "XTAudioPlayer.h"
 
 @interface XTAudioPlayer()
-
-
 @end
 
 @implementation XTAudioPlayer
@@ -55,19 +53,26 @@
 }
 //拔出耳机
 - (void)handleRouteChange:(NSNotification *)notification {
+    
     NSDictionary *info = notification.userInfo;
-    AVAudioSessionRouteChangeReason reason = [info[AVAudioSessionRouteChangeReasonKey] unsignedIntValue];
-    if (reason == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
-        AVAudioSessionRouteDescription *previousRoute = info[AVAudioSessionRouteChangePreviousRouteKey];
-        AVAudioSessionPortDescription *previousOutput = previousRoute.outputs[0];
-        NSString *portType = previousOutput.portType;
-        if ([portType isEqualToString:AVAudioSessionPortHeadphones]) {
-            if (self.player.isPlaying) {
-                [self stop];
+    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    if (type == AVAudioSessionInterruptionTypeBegan) {
+        if (self.player.isPlaying) {
+            [self stop];
+        }
+        if (self.delegate) {
+            [self.delegate playbackStopped];
+        }
+    } else {
+        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+        if (options == AVAudioSessionInterruptionOptionShouldResume) {
+            [self play];
+            if (self.delegate) {
+                [self.delegate playbackBegan];
             }
-            
         }
     }
+    
 }
 //播放被打断（电话，facetime）
 - (void)handleInterruption:(NSNotification *)notification {

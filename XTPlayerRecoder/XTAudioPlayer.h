@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+@protocol XTAudioPlayerDelegate<NSObject>
+@optional
+/**
+ 播放被中断的时候调用
+ */
+- (void)playbackStopped;
+/**
+ 恢复播放的时候调用
+ */
+- (void)playbackBegan;
+@end
+
 @interface XTAudioPlayer : NSObject
 
 @property (nonatomic, strong) AVAudioPlayer *player;
-/**循环*/
+/**设置是否循环，默认NO*/
 @property (nonatomic, assign) BOOL loop;
-
+@property (nonatomic, weak) id<XTAudioPlayerDelegate>delegate;
 
 +(instancetype)playerWithUrl:(NSURL*)url;
 +(instancetype)playerWithData:(NSData*)data;
@@ -28,4 +40,5 @@
 - (void)adjustPan:(float)pan;
 /**调整音量 0~1*/
 - (void)adjustVolume:(float)volume;
+
 @end

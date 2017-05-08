@@ -7,4 +7,5 @@ target 'AudioPlayer' do
 
   # Pods for AudioPlayer
 #	pod 'XTPlayerRecoder'
+pod 'AFNetworking'
 end
