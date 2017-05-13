@@ -18,8 +18,12 @@
 		84919E8D1EBD7748006B1462 /* XTJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E8C1EBD7748006B1462 /* XTJSONResponseSerializer.m */; };
 		84919E901EBD776D006B1462 /* XTJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E8F1EBD776D006B1462 /* XTJSONRequestSerializer.m */; };
 		84919E941EBD93D6006B1462 /* XTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E931EBD93D6006B1462 /* XTRequestManager.m */; };
+		849911C71EC460260048D6B8 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849911C61EC460260048D6B8 /* CaptureViewController.m */; };
+		84A0FE681EC2BF7800806193 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 84A0FE671EC2BF7800806193 /* hubblecast.m4v */; };
 		84B2690C1EBFFA5C003754C1 /* XTAudioRecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2690B1EBFFA5B003754C1 /* XTAudioRecoder.m */; };
 		84B269121EC01EFF003754C1 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B269111EC01EFF003754C1 /* RecordViewController.m */; };
+		84B269151EC0701F003754C1 /* MetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B269141EC0701F003754C1 /* MetadataViewController.m */; };
+		84E038961EC170C700C813B4 /* AVMetadataItem+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E038951EC170C700C813B4 /* AVMetadataItem+THAdditions.m */; };
 		A0E20AF50B1B22C33B743B2B /* libPods-AudioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38594BF6B72DB4B99712B5D7 /* libPods-AudioPlayer.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +50,17 @@
 		84919E921EBD93D6006B1462 /* XTRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTRequestManager.h; sourceTree = "<group>"; };
 		84919E931EBD93D6006B1462 /* XTRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTRequestManager.m; sourceTree = "<group>"; };
 		84919E951EBDB1EE006B1462 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		849911C51EC460260048D6B8 /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
+		849911C61EC460260048D6B8 /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
+		84A0FE671EC2BF7800806193 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
 		84B2690A1EBFFA5B003754C1 /* XTAudioRecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTAudioRecoder.h; sourceTree = "<group>"; };
 		84B2690B1EBFFA5B003754C1 /* XTAudioRecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTAudioRecoder.m; sourceTree = "<group>"; };
 		84B269101EC01EFF003754C1 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		84B269111EC01EFF003754C1 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		84B269131EC0701F003754C1 /* MetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataViewController.h; sourceTree = "<group>"; };
+		84B269141EC0701F003754C1 /* MetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataViewController.m; sourceTree = "<group>"; };
+		84E038941EC170C700C813B4 /* AVMetadataItem+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVMetadataItem+THAdditions.h"; sourceTree = "<group>"; };
+		84E038951EC170C700C813B4 /* AVMetadataItem+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVMetadataItem+THAdditions.m"; sourceTree = "<group>"; };
 		8A5912CF7C9A71BC31F303CA /* Pods-AudioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +121,16 @@
 				847DCA8C1EBC296200DAE2DD /* AppDelegate.m */,
 				847DCA8E1EBC296200DAE2DD /* ViewController.h */,
 				847DCA8F1EBC296200DAE2DD /* ViewController.m */,
+				849911C51EC460260048D6B8 /* CaptureViewController.h */,
+				849911C61EC460260048D6B8 /* CaptureViewController.m */,
 				84B269101EC01EFF003754C1 /* RecordViewController.h */,
 				84B269111EC01EFF003754C1 /* RecordViewController.m */,
+				84B269131EC0701F003754C1 /* MetadataViewController.h */,
+				84B269141EC0701F003754C1 /* MetadataViewController.m */,
+				84E038941EC170C700C813B4 /* AVMetadataItem+THAdditions.h */,
+				84E038951EC170C700C813B4 /* AVMetadataItem+THAdditions.m */,
 				847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */,
+				84A0FE671EC2BF7800806193 /* hubblecast.m4v */,
 				847DCA911EBC296300DAE2DD /* Main.storyboard */,
 				847DCA941EBC296400DAE2DD /* Assets.xcassets */,
 				847DCA961EBC296400DAE2DD /* LaunchScreen.storyboard */,
@@ -219,6 +237,7 @@
 			files = (
 				847DCA981EBC296400DAE2DD /* LaunchScreen.storyboard in Resources */,
 				847DCA951EBC296400DAE2DD /* Assets.xcassets in Resources */,
+				84A0FE681EC2BF7800806193 /* hubblecast.m4v in Resources */,
 				847DCA931EBC296300DAE2DD /* Main.storyboard in Resources */,
 				847DCAA31EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 in Resources */,
 			);
@@ -284,10 +303,13 @@
 				847DCA901EBC296200DAE2DD /* ViewController.m in Sources */,
 				847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */,
 				847DCA8D1EBC296200DAE2DD /* AppDelegate.m in Sources */,
+				849911C71EC460260048D6B8 /* CaptureViewController.m in Sources */,
 				84B2690C1EBFFA5C003754C1 /* XTAudioRecoder.m in Sources */,
 				84919E941EBD93D6006B1462 /* XTRequestManager.m in Sources */,
 				847DCA8A1EBC296100DAE2DD /* main.m in Sources */,
 				84B269121EC01EFF003754C1 /* RecordViewController.m in Sources */,
+				84E038961EC170C700C813B4 /* AVMetadataItem+THAdditions.m in Sources */,
+				84B269151EC0701F003754C1 /* MetadataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

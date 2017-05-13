@@ -38,19 +38,28 @@ typedef void(^XTRecordingSaveCompletionHandler)(BOOL flag,id response);
 -(void)stopWithCompleteHandler:(XTRecordingStopCompletionHandler)hander;
 
 /**
- 保存录音（会强制停止当前正在录音）
+ 保存录音（会强制停止当前正在进行的录音）
  */
 -(void)saveWithCompletionHander:(XTRecordingSaveCompletionHandler _Nonnull)hander;
 
 /**
  获取所有本地已保存的录音名称
  */
--(NSArray*_Nullable)getAllMySavedAudiosName;
+-(NSArray*)getAllMySavedAudiosName;
 
 /**
  获取所有本地已保存的录音URL
  */
--(NSArray*_Nullable)getAllMySavedAudiosPathString;
+-(NSArray*)getAllMySavedAudiosPathString;
 
+
+/**
+  获取当前播放时间
+
+  @param needFormat 是否需要格式化成00:00:00样式
+  @return 格式化后的时间活着未格式化的时间
+*/
+
+-(NSString *)getCurrentTimeFormated:(BOOL)needFormat;
 
 @end

@@ -19,27 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"薛之谦-我害怕.mp3" withExtension:nil];
-    XTPlayer = [XTAudioPlayer playerWithUrl:url];
-   
-//    
-//    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-//    maskLayer.frame = CGRectMake(0, 0, 10, 10);
-//   
-//    CAShapeLayer *borderLayer = [CAShapeLayer layer];
-//    borderLayer.frame = CGRectMake(0, 0, 10, 20);
-//    borderLayer.lineWidth = 1.f;
-//    borderLayer.strokeColor = [UIColor blueColor].CGColor;
-//    borderLayer.fillColor = [UIColor yellowColor].CGColor;
-//    
-//    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 64, 200, 300) cornerRadius:10];
-//    maskLayer.path = bezierPath.CGPath;
-//    borderLayer.path = bezierPath.CGPath;
-//    
-//    [self.view.layer insertSublayer:borderLayer atIndex:0];
-//    [self.view.layer setMask:maskLayer];
-//    UIView*rblue = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
-//    rblue.backgroundColor = [UIColor brownColor];
-//    [self.view addSubview:rblue];
+    XTPlayer = [XTAudioPlayer playerWithUrl:url];   
 }
 -(void)injected{
     [self viewDidLoad];

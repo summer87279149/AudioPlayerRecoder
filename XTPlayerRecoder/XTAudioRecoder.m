@@ -16,6 +16,7 @@ NSString *const XTFormatRateKeyLow = @"XTFormatRateKeyLow";
 {
     BOOL isSaved;
 }
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSDictionary *rateKeys;
 @property (nonatomic, copy) XTRecordingStopCompletionHandler completionHandler;
 @end
@@ -28,6 +29,7 @@ NSString *const XTFormatRateKeyLow = @"XTFormatRateKeyLow";
 -(instancetype)initWithRate:(XTFormatRate)rateType{
     self = [super init];
     if (self) {
+    
         NSNumber* rateValue;
         switch (rateType) {
             case XTFormatRateBest:
@@ -146,6 +148,7 @@ NSString *const XTFormatRateKeyLow = @"XTFormatRateKeyLow";
     NSArray *allAudiosArr = [[NSArray alloc]initWithArray:[[NSFileManager defaultManager]contentsOfDirectoryAtPath:destPath error:&error]];
     return allAudiosArr;
 }
+
 -(NSArray*)getAllMySavedAudiosPathString{
     NSString *docsDir = [self documentsDirectory];
     NSString *destPath = [docsDir stringByAppendingPathComponent:@"XTAudios"];
@@ -161,6 +164,21 @@ NSString *const XTFormatRateKeyLow = @"XTFormatRateKeyLow";
     }
     return URLsArr;
 }
+-(NSString *)getCurrentTimeFormated:(BOOL)needFormat{
+    
+    
+    NSUInteger time = (NSUInteger)self.recorder.currentTime;
+    if (!needFormat) {
+        return [NSString stringWithFormat:@"%lu",(unsigned long)time];
+    }
+    NSInteger hours = time/3600;
+    NSInteger minutes = (time/60)%60;
+    NSInteger seconds = time%60;
+    NSString *format = @"%02i:%02i:%02i";
+    return [NSString stringWithFormat:format,hours,minutes,seconds];
+    
+}
+
 -(NSString*)documentsDirectory{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     return [paths objectAtIndex:0];
