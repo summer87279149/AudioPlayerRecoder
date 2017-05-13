@@ -17,9 +17,6 @@
 		847DCA981EBC296400DAE2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847DCA961EBC296400DAE2DD /* LaunchScreen.storyboard */; };
 		847DCAA31EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */; };
 		847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */; };
-		84919E8D1EBD7748006B1462 /* XTJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E8C1EBD7748006B1462 /* XTJSONResponseSerializer.m */; };
-		84919E901EBD776D006B1462 /* XTJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E8F1EBD776D006B1462 /* XTJSONRequestSerializer.m */; };
-		84919E941EBD93D6006B1462 /* XTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84919E931EBD93D6006B1462 /* XTRequestManager.m */; };
 		849911C71EC460260048D6B8 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849911C61EC460260048D6B8 /* CaptureViewController.m */; };
 		84A0FE681EC2BF7800806193 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 84A0FE671EC2BF7800806193 /* hubblecast.m4v */; };
 		84B2690C1EBFFA5C003754C1 /* XTAudioRecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2690B1EBFFA5B003754C1 /* XTAudioRecoder.m */; };
@@ -49,12 +46,6 @@
 		847DCAA21EBC2D8C00DAE2DD /* 薛之谦-我害怕.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "薛之谦-我害怕.mp3"; sourceTree = "<group>"; };
 		847DCAA51EBC6BFE00DAE2DD /* XTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTAudioPlayer.h; sourceTree = "<group>"; };
 		847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTAudioPlayer.m; sourceTree = "<group>"; };
-		84919E8B1EBD7748006B1462 /* XTJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTJSONResponseSerializer.h; path = ../XTJSONResponseSerializer.h; sourceTree = "<group>"; };
-		84919E8C1EBD7748006B1462 /* XTJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTJSONResponseSerializer.m; path = ../XTJSONResponseSerializer.m; sourceTree = "<group>"; };
-		84919E8E1EBD776D006B1462 /* XTJSONRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTJSONRequestSerializer.h; path = ../XTJSONRequestSerializer.h; sourceTree = "<group>"; };
-		84919E8F1EBD776D006B1462 /* XTJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTJSONRequestSerializer.m; path = ../XTJSONRequestSerializer.m; sourceTree = "<group>"; };
-		84919E921EBD93D6006B1462 /* XTRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTRequestManager.h; sourceTree = "<group>"; };
-		84919E931EBD93D6006B1462 /* XTRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTRequestManager.m; sourceTree = "<group>"; };
 		849911C51EC460260048D6B8 /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
 		849911C61EC460260048D6B8 /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
 		84A0FE671EC2BF7800806193 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
@@ -101,7 +92,6 @@
 		847DCA7C1EBC296000DAE2DD = {
 			isa = PBXGroup;
 			children = (
-				84919E911EBD93D6006B1462 /* XTHTTPRequestManager */,
 				847DCAA41EBC6BFE00DAE2DD /* XTPlayerRecoder */,
 				847DCA871EBC296100DAE2DD /* AudioPlayer */,
 				847DCA861EBC296100DAE2DD /* Products */,
@@ -165,20 +155,6 @@
 				84B2690B1EBFFA5B003754C1 /* XTAudioRecoder.m */,
 			);
 			path = XTPlayerRecoder;
-			sourceTree = "<group>";
-		};
-		84919E911EBD93D6006B1462 /* XTHTTPRequestManager */ = {
-			isa = PBXGroup;
-			children = (
-				84919E921EBD93D6006B1462 /* XTRequestManager.h */,
-				84919E931EBD93D6006B1462 /* XTRequestManager.m */,
-				84919E8E1EBD776D006B1462 /* XTJSONRequestSerializer.h */,
-				84919E8F1EBD776D006B1462 /* XTJSONRequestSerializer.m */,
-				84919E8B1EBD7748006B1462 /* XTJSONResponseSerializer.h */,
-				84919E8C1EBD7748006B1462 /* XTJSONResponseSerializer.m */,
-			);
-			name = XTHTTPRequestManager;
-			path = AudioPlayer/XTHTTPRequestManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,15 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				847D3E891EC6E91000AE54E2 /* NSFileManager+XTAdditions.m in Sources */,
-				84919E8D1EBD7748006B1462 /* XTJSONResponseSerializer.m in Sources */,
 				847D3E861EC6E8F300AE54E2 /* XTCameraManager.m in Sources */,
-				84919E901EBD776D006B1462 /* XTJSONRequestSerializer.m in Sources */,
 				847DCA901EBC296200DAE2DD /* ViewController.m in Sources */,
 				847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */,
 				847DCA8D1EBC296200DAE2DD /* AppDelegate.m in Sources */,
 				849911C71EC460260048D6B8 /* CaptureViewController.m in Sources */,
 				84B2690C1EBFFA5C003754C1 /* XTAudioRecoder.m in Sources */,
-				84919E941EBD93D6006B1462 /* XTRequestManager.m in Sources */,
 				847DCA8A1EBC296100DAE2DD /* main.m in Sources */,
 				84B269121EC01EFF003754C1 /* RecordViewController.m in Sources */,
 				84E038961EC170C700C813B4 /* AVMetadataItem+THAdditions.m in Sources */,
@@ -448,19 +421,7 @@
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.houolaladriver.AudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -479,19 +440,7 @@
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.houolaladriver.AudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

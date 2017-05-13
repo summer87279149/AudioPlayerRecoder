@@ -122,14 +122,6 @@
                                     <segue destination="kli-DK-fGn" kind="show" id="Ly3-wT-QgP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-DH-67x">
-                                <rect key="frame" x="12" y="173" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="视频播放页面"/>
-                                <connections>
-                                    <segue destination="eA5-5C-L4y" kind="show" id="M4g-Gt-XWn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

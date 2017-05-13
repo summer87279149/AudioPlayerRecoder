@@ -5,7 +5,6 @@
 //  Created by Admin on 2017/5/5.
 //  Copyright © 2017年 Admin. All rights reserved.
 //
-#import "XTRequestManager.h"
 #import "ViewController.h"
 #import "XTAudioPlayer.h"
 @interface ViewController ()
@@ -27,11 +26,7 @@
 
 - (IBAction)urlPlay:(id)sender {
     [XTPlayer play];
-    [XTRequestManager GET:@"http://myadmin.all-360.com:8080/Admin/AppApi/shopCartList/uid/12774" parameters:nil responseSeializerType:NHResponseSeializerTypeDefault success:^(id responseObject) {
-        NSLog(@"测试结果:\n %@",responseObject);
-    } failure:^(NSError *error) {
-        NSLog(@"测试失败结果:\n %@",error);
-    }];
+   
 }
 - (IBAction)stop2:(id)sender {
     [XTPlayer.player pause];
