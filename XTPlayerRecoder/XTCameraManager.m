@@ -258,25 +258,17 @@ static const NSString *THCameraAdjustingExposureContext;
 }
 
 - (void)resetFocusAndExposureModes {
-    
     AVCaptureDevice *device = [self activeCamera];
-    
     AVCaptureExposureMode exposureMode =
     AVCaptureExposureModeContinuousAutoExposure;
-    
     AVCaptureFocusMode focusMode = AVCaptureFocusModeContinuousAutoFocus;
-    
     BOOL canResetFocus = [device isFocusPointOfInterestSupported] &&
     [device isFocusModeSupported:focusMode];
-    
     BOOL canResetExposure = [device isExposurePointOfInterestSupported] &&
     [device isExposureModeSupported:exposureMode];
-    
     CGPoint centerPoint = CGPointMake(0.5f, 0.5f);
-    
     NSError *error;
     if ([device lockForConfiguration:&error]) {
-        
         if (canResetFocus) {
             device.focusMode = focusMode;
             device.focusPointOfInterest = centerPoint;
@@ -286,9 +278,7 @@ static const NSString *THCameraAdjustingExposureContext;
             device.exposureMode = exposureMode;
             device.exposurePointOfInterest = centerPoint;
         }
-        
         [device unlockForConfiguration];
-        
     } else {
         [self.delegate deviceConfigurationFailedWithError:error];
     }
@@ -298,7 +288,6 @@ static const NSString *THCameraAdjustingExposureContext;
 
 
 #pragma mark - Flash and Torch Modes
-
 - (BOOL)cameraHasFlash {
     return [[self activeCamera] hasFlash];
 }
@@ -310,12 +299,9 @@ static const NSString *THCameraAdjustingExposureContext;
 
 
 - (void)setFlashMode:(AVCaptureFlashMode)flashMode {
-    
     AVCaptureDevice *device = [self activeCamera];
-    
     if (device.flashMode != flashMode &&
         [device isFlashModeSupported:flashMode]) {
-        
         NSError *error;
         if ([device lockForConfiguration:&error]) {
             device.flashMode = flashMode;
@@ -335,12 +321,9 @@ static const NSString *THCameraAdjustingExposureContext;
 }
 
 - (void)setTorchMode:(AVCaptureTorchMode)torchMode {
-    
     AVCaptureDevice *device = [self activeCamera];
-    
     if (device.torchMode != torchMode &&
         [device isTorchModeSupported:torchMode]) {
-        
         NSError *error;
         if ([device lockForConfiguration:&error]) {
             device.torchMode = torchMode;
@@ -354,17 +337,12 @@ static const NSString *THCameraAdjustingExposureContext;
 
 
 #pragma mark - Image Capture Methods
-
-
 - (void)captureStillImage {
-    
     AVCaptureConnection *connection =
     [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
-    
     if (connection.isVideoOrientationSupported) {
         connection.videoOrientation = [self currentVideoOrientation];
     }
-    
     [self.imageOutput captureStillImageAsynchronouslyFromConnection:connection
      completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
          if (imageDataSampleBuffer != NULL) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847D3E861EC6E8F300AE54E2 /* XTCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D3E841EC6E8F300AE54E2 /* XTCameraManager.m */; };
+		847D3E891EC6E91000AE54E2 /* NSFileManager+XTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D3E881EC6E91000AE54E2 /* NSFileManager+XTAdditions.m */; };
 		847DCA8A1EBC296100DAE2DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCA891EBC296100DAE2DD /* main.m */; };
 		847DCA8D1EBC296200DAE2DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCA8C1EBC296200DAE2DD /* AppDelegate.m */; };
 		847DCA901EBC296200DAE2DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847DCA8F1EBC296200DAE2DD /* ViewController.m */; };
@@ -30,6 +32,10 @@
 /* Begin PBXFileReference section */
 		12158382144DA3967B8E12A1 /* Pods-AudioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		38594BF6B72DB4B99712B5D7 /* libPods-AudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		847D3E841EC6E8F300AE54E2 /* XTCameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTCameraManager.m; sourceTree = "<group>"; };
+		847D3E851EC6E8F300AE54E2 /* XTCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTCameraManager.h; sourceTree = "<group>"; };
+		847D3E871EC6E91000AE54E2 /* NSFileManager+XTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+XTAdditions.h"; sourceTree = "<group>"; };
+		847D3E881EC6E91000AE54E2 /* NSFileManager+XTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+XTAdditions.m"; sourceTree = "<group>"; };
 		847DCA851EBC296100DAE2DD /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847DCA891EBC296100DAE2DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		847DCA8B1EBC296100DAE2DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,7 +55,6 @@
 		84919E8F1EBD776D006B1462 /* XTJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTJSONRequestSerializer.m; path = ../XTJSONRequestSerializer.m; sourceTree = "<group>"; };
 		84919E921EBD93D6006B1462 /* XTRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTRequestManager.h; sourceTree = "<group>"; };
 		84919E931EBD93D6006B1462 /* XTRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTRequestManager.m; sourceTree = "<group>"; };
-		84919E951EBDB1EE006B1462 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		849911C51EC460260048D6B8 /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
 		849911C61EC460260048D6B8 /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
 		84A0FE671EC2BF7800806193 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
@@ -96,7 +101,6 @@
 		847DCA7C1EBC296000DAE2DD = {
 			isa = PBXGroup;
 			children = (
-				84919E951EBDB1EE006B1462 /* Reveal.framework */,
 				84919E911EBD93D6006B1462 /* XTHTTPRequestManager */,
 				847DCAA41EBC6BFE00DAE2DD /* XTPlayerRecoder */,
 				847DCA871EBC296100DAE2DD /* AudioPlayer */,
@@ -151,6 +155,10 @@
 		847DCAA41EBC6BFE00DAE2DD /* XTPlayerRecoder */ = {
 			isa = PBXGroup;
 			children = (
+				847D3E871EC6E91000AE54E2 /* NSFileManager+XTAdditions.h */,
+				847D3E881EC6E91000AE54E2 /* NSFileManager+XTAdditions.m */,
+				847D3E851EC6E8F300AE54E2 /* XTCameraManager.h */,
+				847D3E841EC6E8F300AE54E2 /* XTCameraManager.m */,
 				847DCAA51EBC6BFE00DAE2DD /* XTAudioPlayer.h */,
 				847DCAA61EBC6BFE00DAE2DD /* XTAudioPlayer.m */,
 				84B2690A1EBFFA5B003754C1 /* XTAudioRecoder.h */,
@@ -298,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847D3E891EC6E91000AE54E2 /* NSFileManager+XTAdditions.m in Sources */,
 				84919E8D1EBD7748006B1462 /* XTJSONResponseSerializer.m in Sources */,
+				847D3E861EC6E8F300AE54E2 /* XTCameraManager.m in Sources */,
 				84919E901EBD776D006B1462 /* XTJSONRequestSerializer.m in Sources */,
 				847DCA901EBC296200DAE2DD /* ViewController.m in Sources */,
 				847DCAA71EBC6BFE00DAE2DD /* XTAudioPlayer.m in Sources */,
@@ -450,10 +460,6 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.houolaladriver.AudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,10 +491,6 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.houolaladriver.AudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
