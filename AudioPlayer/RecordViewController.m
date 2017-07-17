@@ -61,7 +61,7 @@
     }];
     NSArray *arr = [self.recorder getAllMySavedAudiosPathString];
     for (NSString *str in arr) {
-//        NSLog(@"数组里面是:%@",str);
+        NSLog(@"数组里面是:%@",str);
     }
     
 }

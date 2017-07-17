@@ -18,13 +18,13 @@ typedef NS_ENUM(NSUInteger,XTFormatRate){
 @interface XTAudioRecoder : NSObject<AVAudioRecorderDelegate>
 
 typedef void(^XTRecordingStopCompletionHandler)(BOOL flag);
-typedef void(^XTRecordingSaveCompletionHandler)(BOOL flag,id response);
+typedef void(^XTRecordingSaveCompletionHandler)(BOOL flag,id _Nullable response);
 
-@property (nonatomic,strong) AVAudioRecorder *recorder;
+@property (nonatomic,strong) AVAudioRecorder * _Nonnull recorder;
 /**
  init
  */
--(instancetype)initWithRate:(XTFormatRate)rateType;
+-(instancetype _Nonnull )initWithRate:(XTFormatRate)rateType;
 
 /**
  开始录音
@@ -35,22 +35,22 @@ typedef void(^XTRecordingSaveCompletionHandler)(BOOL flag,id response);
  */
 -(void)pause;
 
--(void)stopWithCompleteHandler:(XTRecordingStopCompletionHandler)hander;
+-(void)stopWithCompleteHandler:(XTRecordingStopCompletionHandler _Nullable  )hander;
 
 /**
  保存录音（会强制停止当前正在进行的录音）
  */
--(void)saveWithCompletionHander:(XTRecordingSaveCompletionHandler _Nonnull)hander;
+-(void)saveWithCompletionHander:(XTRecordingSaveCompletionHandler _Nullable )hander;
 
 /**
  获取所有本地已保存的录音名称
  */
--(NSArray*)getAllMySavedAudiosName;
+-(NSArray*_Nullable)getAllMySavedAudiosName;
 
 /**
  获取所有本地已保存的录音URL
  */
--(NSArray*)getAllMySavedAudiosPathString;
+-(NSArray*_Nullable)getAllMySavedAudiosPathString;
 
 
 /**
@@ -60,6 +60,6 @@ typedef void(^XTRecordingSaveCompletionHandler)(BOOL flag,id response);
   @return 格式化后的时间活着未格式化的时间
 */
 
--(NSString *)getCurrentTimeFormated:(BOOL)needFormat;
+-(NSString *_Nullable)getCurrentTimeFormated:(BOOL)needFormat;
 
 @end

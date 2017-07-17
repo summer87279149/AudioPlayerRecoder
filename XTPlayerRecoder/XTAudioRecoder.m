@@ -110,7 +110,7 @@ NSString *const XTFormatRateKeyLow = @"XTFormatRateKeyLow";
     return _rateKeys;
 }
 
--(void)saveWithCompletionHander:( XTRecordingSaveCompletionHandler _Nonnull)hander{
+-(void)saveWithCompletionHander:( XTRecordingSaveCompletionHandler )hander{
     if (isSaved) {
         NSLog(@"当前录音已保存过");
         NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:10110101 userInfo:@{@"info":@"当前录音已保存过"}];

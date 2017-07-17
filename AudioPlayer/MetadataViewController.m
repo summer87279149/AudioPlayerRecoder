@@ -19,7 +19,7 @@
     
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"Hubblecast.mov" withExtension:nil];
     AVAsset *asset = [AVAsset assetWithURL:url];
-    NSMutableArray *arr2 = [NSMutableArray array];
+//    NSMutableArray *arr2 = [NSMutableArray array];
     [asset loadValuesAsynchronouslyForKeys:@[@"availableMetadataFormats"] completionHandler:^{
         NSError *error=nil;
         //如果直接调用这个asset.availableMetadataFormats是同步的，会卡界面，上面的loadValuesAsynchronouslyForKeys：方法就是先异步加载好这个availableMetadataFormats属性，然后现在就可以直接读了。这是apple的优化。
@@ -31,7 +31,7 @@
                     NSLog(@"format=%@",format);
                     NSArray *meatataArray=[asset metadataForFormat:format];
 //                    NSLog(@"meatataArray里面%@",meatataArray);
-                    NSArray *artisArray=[AVMetadataItem metadataItemsFromArray:meatataArray withKey:AVMetadataCommonKeyArtist keySpace:AVMetadataKeySpaceCommon];
+//                    NSArray *artisArray=[AVMetadataItem metadataItemsFromArray:meatataArray withKey:AVMetadataCommonKeyArtist keySpace:AVMetadataKeySpaceCommon];
                     for (AVMetadataItem *item in meatataArray)
                     {
                         NSLog(@"key=%@,value=%@",item.commonKey,item.value);
